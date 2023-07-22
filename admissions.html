@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Admissions Page</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #084b8a;
+            color: #ffffff;
+            padding: 20px;
+        }
+
+        .logo {
+            width: 40px;
+            height: auto;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+
+        li {
+            margin-left: 20px;
+        }
+
+        a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #f7df1e;
+        }
+
+        .hero {
+            background-image: url('college-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding: 100px;
+            color: #ffffff;
+        }
+
+        .hero h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+        .hero-button {
+            display: inline-block;
+            background-color: #f7df1e;
+            color: #084b8a;
+            font-size: 16px;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .hero-button:hover {
+            background-color: #084b8a;
+            color: #ffffff;
+        }
+
+        .card {
+            background-color: #ffffff;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .card2 {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            font-size: 1.3em;
+            color: #084b8a;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #777;
+        }
+
+        footer {
+            color: #ffffff;
+            text-align: center;
+        }
+
+        footer p {
+            color: #ffffff;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .program,
+        .event,
+        .facility {
+            flex: 1;
+            text-align: center;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .program:hover,
+        .event:hover,
+        .facility:hover {
+            transform: translateY(-5px);
+        }
+
+        .program img,
+        .event img,
+        .facility img {
+            width: 100%;
+            max-height: 150px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        .program h3,
+        .event h3,
+        .facility h3 {
+            font-size: 1.3em;
+            color: #084b8a;
+            margin-bottom: 10px;
+        }
+
+        .program p,
+        .event p,
+        .facility p {
+            color: #777;
+        }
+
+        .main2 {
+            background-image: url('college-hero.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .main3 {
+            background-image: url('back-image.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        form {
+            margin-top: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 18px;
+            color: #084b8a;
+            margin-bottom: 5px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        textarea {
+            height: 120px;
+        }
+
+        button[type="submit"] {
+            background-color: #f7df1e;
+            color: #084b8a;
+            font-size: 16px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #084b8a;
+            color: #ffffff;
+        }
+
+        /* Animation Effects */
+        @keyframes formAnimation {
+            0% {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        #contact-form {
+            animation: formAnimation 0.5s ease-in-out;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 32px;
+            padding-right: 45px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            z-index: 9999;
+            width: 80%;
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            color: #aaa;
+        }
+
+        .popup h2 {
+            color: #084b8a;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="#"><img class="logo" src="college-logo.png" alt="Logo"></a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Welcome to our College Admissions</h2>
+        <p>Explore the opportunities and benefits of studying at our esteemed institution.</p>
+        <a class="hero-button" href="#" onclick="openPopup('registrationPopup')">Apply Now</a>
+
+
+    </section>
+
+    <section class="container">
+        <div class="program">
+            <h3>Newly Admitted Students</h3>
+            <div class="card">
+                <h3>Jay Patel</h3>
+                <p>Program: Computer Science</p>
+                <p>Batch: 2023</p>
+            </div>
+            <div class="card">
+                <h3>Sahil Vohra</h3>
+                <p>Program: Business Administration</p>
+                <p>Batch: 2023</p>
+            </div>
+
+        </div>
+
+        <div class="event">
+            <h3>College Stars</h3>
+            <div class="card">
+                <h3>Krish Patel</h3>
+                <p>Major: CS</p>
+                <p>CGPA: 9.8</p>
+            </div>
+            <div class="card">
+                <h3>Krima Patel</h3>
+                <p>Major: Electrical</p>
+                <p>CGPA: 9.5</p>
+            </div>
+
+        </div>
+
+        <div class="facility">
+            <h3>Reviews About College</h3>
+            <div class="card2">
+                <h3>Neel valand</h3>
+                <p>"I had an amazing experience at this college. The faculty is highly knowledgeable and supportive."
+                </p>
+            </div>
+            <div class="card2">
+                <h3>Mihir Patel</h3>
+                <p>"The college provides excellent resources and opportunities for personal and professional growth."
+                </p>
+            </div>
+        </div>
+    </section>
+    <div class="popup" id="registrationPopup">
+        <div class="popup-content">
+            <h2>Registration Form</h2>
+            <form action="process_registration.php" method="post">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="program">Program:</label>
+                    <select id="program" name="program" required>
+                        <option value="computer-science">Computer Engineering</option>
+                        <option value="business-administration">Information Technology</option>
+                    </select>
+                </div>
+                <button type="submit">Register</button>
+            </form>
+            <span class="popup-close" onclick="closePopup('registrationPopup')">Close</span>
+        </div>
+    </div>
+    
+    <footer class="bg-dark text-center text-white">
+
+        <div class="container p-4 pb-0">
+            <section class="mb-4">
+    
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fa fa-facebook-f"></i></a>
+
+                <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/krishpa63691126"
+                    role="button"><i class="fa fa-twitter"></i></a>
+
+                <a class="btn btn-outline-light btn-floating m-1" href="" role="button"><i class="fa fa-google"></i></a>
+
+                <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/krishpatel029/"
+                    role="button"><i class="fa fa-instagram"></i></a>
+
+                <a class="btn btn-outline-light btn-floating m-1"
+                    href="https://www.linkedin.com/in/krish-patel-a2a81b247" role="button"><i
+                        class="fa fa-linkedin"></i></a>
+
+                <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/krishpatel29"
+                    role="button"><i class="fa fa-github"></i></a>
+            </section>
+        </div>
+
+    </footer>
+</body>
+
+</html>
+

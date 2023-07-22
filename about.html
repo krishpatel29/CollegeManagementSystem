@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - College Website</title>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Add your existing CSS styles */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #084b8a;
+            color: #ffffff;
+            padding: 20px;
+        }
+
+        .logo {
+            width: 40px;
+            height: auto;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+
+        li {
+            margin-left: 20px;
+        }
+
+        a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #f7df1e;
+        }
+
+        .about {
+            text-align: center;
+        }
+
+        footer {
+            padding: 20px;
+        }
+
+        .hero {
+            background-image: url('college-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding: 100px;
+            color: #ffffff;
+        }
+
+        .hero h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+        .hero-button {
+            display: inline-block;
+            background-color: #f7df1e;
+            color: #084b8a;
+            font-size: 16px;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .hero-button:hover {
+            background-color: #084b8a;
+            color: #ffffff;
+        }
+
+        .card {
+            background-color: #ffffff;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            font-size: 1.3em;
+            color: #084b8a;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #777;
+        }
+
+        .about-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .about-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .about-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-info h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .about-info p {
+            font-size: 16px;
+            color: #888888;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+
+        }
+
+        .slideshow {
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .reviews {
+            padding: 50px 0;
+            background-color: #f2f2f2;
+        }
+
+        .reviews .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .reviews h2 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .review-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .review-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .review-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+        }
+
+        .review-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .review-text {
+            flex-grow: 1;
+        }
+
+        .review-text p {
+            margin-bottom: 10px;
+        }
+
+        .review-text h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .review-text span {
+            color: #888;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img src="college-logo.png" alt="College Logo" class="logo">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <h2>Welcome to About</h2>
+        <p>Discover a world of knowledge and opportunities.</p>
+        <a href="#" class="hero-button">Learn More</a>
+    </section>
+
+    <section class="cards">
+        <div class="card">
+            <h3>Academic Programs</h3>
+            <p>Explore our wide range of academic programs and discover your passion.</p>
+        </div>
+        <div class="card">
+            <h3>Campus Life</h3>
+            <p>Experience a vibrant campus life with various clubs, events, and activities.</p>
+        </div>
+        <div class="card">
+            <h3>Career Services</h3>
+            <p>Get assistance in finding internships, job placements, and career development.</p>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container main2">
+            <div class="about-card">
+                <div class="about-img">
+                    <img src="college-building.jpg" alt="College Building">
+                </div>
+                <div class="about-info">
+                    <h2>About Our College</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget velit ac neque volutpat
+                        vestibulum eget a elit. Sed feugiat hendrerit lectus in laoreet. Fusce dapibus vel eros id
+                        aliquet. Maecenas hendrerit justo eget rhoncus efficitur. Suspendisse potenti. Cras non diam
+                        eros. Mauris a leo commodo, vestibulum mauris eu, dapibus risus.</p>
+                </div>
+            </div>
+
+            <div class="about-card">
+                <div class="about-img">
+                    <img src="vision-image.jpg" alt="Vision Image">
+                </div>
+                <div class="about-info">
+                    <h2>Our Vision</h2>
+                    <p>Vestibulum sit amet turpis vel lorem interdum feugiat. Proin at mi ac ex tincidunt gravida ut vel
+                        orci. Nullam condimentum orci vitae tellus lobortis, vitae finibus libero dignissim. Proin
+                        dapibus posuere dolor, sed fringilla nunc. Mauris quis ex et urna vestibulum varius vel non
+                        nisi. Proin a rutrum tortor.</p>
+                </div>
+            </div>
+
+            <div class="about-card">
+                <div class="about-img">
+                    <img src="team-photo.jpg" alt="Team Photo">
+                </div>
+                <div class="about-info">
+                    <h2>Our Team</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget velit ac neque volutpat
+                        vestibulum eget a elit. Sed feugiat hendrerit lectus in laoreet. Fusce dapibus vel eros id
+                        aliquet. Maecenas hendrerit justo eget rhoncus efficitur. Suspendisse potenti. Cras non diam
+                        eros. Mauris a leo commodo, vestibulum mauris eu, dapibus risus.</p>
+                </div>
+            </div>
+        </div>
+    </section><br>
+    <section class="about">
+        <div class="container main2">
+            <div class="about-card">
+                <div class="about-img">
+                    <img src="research-innovation.jpg" alt="Research and Innovation">
+                </div>
+                <div class="about-info">
+                    <h2>Research and Innovation</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget velit ac neque volutpat
+                        vestibulum eget a elit. Sed feugiat hendrerit lectus in laoreet. Fusce dapibus vel eros id
+                        aliquet. Maecenas hendrerit justo eget rhoncus efficitur. Suspendisse potenti. Cras non diam
+                        eros. Mauris a leo commodo, vestibulum mauris eu, dapibus risus.</p>
+                </div>
+            </div>
+
+            <div class="about-card">
+                <div class="about-img">
+                    <img src="partnerships-collaborations.jpg" alt="Partnerships and Collaborations">
+                </div>
+                <div class="about-info">
+                    <h2>Partnerships and Collaborations</h2>
+                    <p>Vestibulum sit amet turpis vel lorem interdum feugiat. Proin at mi ac ex tincidunt gravida ut vel
+                        orci. Nullam condimentum orci vitae tellus lobortis, vitae finibus libero dignissim. Proin
+                        dapibus posuere dolor, sed fringilla nunc. Mauris quis ex et urna vestibulum varius vel non
+                        nisi. Proin a rutrum tortor.</p>
+                </div>
+            </div>
+
+            <div class="about-card">
+                <div class="about-img">
+                    <img src="student-life.jpg" alt="Student Life">
+                </div>
+                <div class="about-info">
+                    <h2>Student Life</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget velit ac neque volutpat
+                        vestibulum eget a elit. Sed feugiat hendrerit lectus in laoreet. Fusce dapibus vel eros id
+                        aliquet. Maecenas hendrerit justo eget rhoncus efficitur. Suspendisse potenti. Cras non diam
+                        eros. Mauris a leo commodo, vestibulum mauris eu, dapibus risus.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="bg-dark text-center text-white">
+
+        <div class="container p-4 pb-0">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fa fa-facebook-f"></i></a>
+
+                <!-- Twitter -->
+                <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/krishpa63691126"
+                    role="button"><i class="fa fa-twitter"></i></a>
+
+                <!-- Google -->
+                <a class="btn btn-outline-light btn-floating m-1" href="" role="button"><i class="fa fa-google"></i></a>
+
+                <!-- Instagram -->
+                <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/krishpatel029/"
+                    role="button"><i class="fa fa-instagram"></i></a>
+
+                <!-- Linkedin -->
+                <a class="btn btn-outline-light btn-floating m-1"
+                    href="https://www.linkedin.com/in/krish-patel-a2a81b247" role="button"><i
+                        class="fa fa-linkedin"></i></a>
+
+                <!-- Github -->
+                <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/krishpatel29"
+                    role="button"><i class="fa fa-github"></i></a>
+            </section>
+
+        </div>
+
+    </footer>
+</body>
+
+</html>

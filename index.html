@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Website</title>
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script>
+
+    const programCoursesLink = document.querySelector('a[href="#course"]');
+    const contactLink = document.querySelector('a[href="#contact"]');
+
+    programCoursesLink.addEventListener('click', function (event) {
+      event.preventDefault();
+      const target = document.querySelector('#programs-courses');
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    contactLink.addEventListener('click', function (event) {
+      event.preventDefault();
+      const target = document.querySelector('#contact');
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+  </script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #084b8a;
+      color: #ffffff;
+      padding: 20px;
+    }
+
+    .logo {
+      width: 40px;
+      height: auto;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+    }
+
+    li {
+      margin-left: 20px;
+    }
+
+    a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    a:hover {
+      color: #f7df1e;
+    }
+
+    .hero {
+      background-image: url('college-hero.jpg');
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+      padding: 100px;
+      color: #ffffff;
+    }
+
+    .hero h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+
+    .hero-button {
+      display: inline-block;
+      background-color: #f7df1e;
+      color: #084b8a;
+      font-size: 16px;
+      padding: 10px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .hero-button:hover {
+      background-color: #084b8a;
+      color: #ffffff;
+    }
+
+    .card {
+      background-color: #ffffff;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .card2 {
+      background-color: #ffffff;
+      padding: 20px;
+
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      font-size: 1.3em;
+      color: #084b8a;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #777;
+    }
+
+    footer {
+
+      color: #ffffff;
+
+      text-align: center;
+    }
+
+    footer p {
+      color: #ffffff;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 10px;
+      }
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+
+    }
+
+    .program,
+    .event,
+    .facility {
+      flex: 1;
+      text-align: center;
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .program:hover,
+    .event:hover,
+    .facility:hover {
+      transform: translateY(-5px);
+    }
+
+    .program img,
+    .event img,
+    .facility img {
+      width: 100%;
+      max-height: 150px;
+      object-fit: cover;
+      border-radius: 4px;
+      margin-bottom: 20px;
+    }
+
+    .program h3,
+    .event h3,
+    .facility h3 {
+      font-size: 1.3em;
+      color: #084b8a;
+      margin-bottom: 10px;
+    }
+
+    .program p,
+    .event p,
+    .facility p {
+      color: #777;
+    }
+
+    .main2 {
+      background-image: url('college-hero.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .main3 {
+      background-image: url('back-image.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    form {
+      margin-top: 30px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-size: 18px;
+      color: #084b8a;
+      margin-bottom: 5px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    textarea {
+      height: 120px;
+    }
+
+    button[type="submit"] {
+      background-color: #f7df1e;
+      color: #084b8a;
+      font-size: 16px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #084b8a;
+      color: #ffffff;
+    }
+
+    @keyframes formAnimation {
+      0% {
+        transform: translateY(-20px);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    #contact-form {
+      animation: formAnimation 0.5s ease-in-out;
+    }
+
+    .popup {
+      display: block;
+    }
+
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      z-index: 9999;
+    }
+
+   
+    .popup-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      font-size: 20px;
+      color: #aaa;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <img src="college-logo.png" alt="College Logo" class="logo">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#course">Courses</a></li>
+        <li><a href="admissions.html">Admissions</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Welcome to Our College</h2>
+    <p>Discover a world of knowledge and opportunities.</p>
+    <a href="#" class="hero-button">Learn More</a>
+  </section>
+
+
+  <section class="cards additional-section">
+    <div class="card" id="academic-programs-card" onclick="showCalendar()">
+      <h3>Academic Programs</h3>
+      <p>Explore our wide range of academic programs and discover your passion.</p>
+    </div>
+    <div class="card" onclick="showPhotoGallery()">
+      <h3>Campus Life</h3>
+      <p>Experience a vibrant campus life with various clubs, events, and activities.</p>
+    </div>
+    <div class="card" onclick="showCareerServices()">
+      <h3>Career Services</h3>
+      <p>Get assistance in finding internships, job placements, and career development.</p>
+    </div>
+  </section>
+
+  <div class="main2">
+    <section id="course" class="programs-courses">
+      <div class="container">
+        <h2>Program & course</h2>
+        <div class="program">
+          <img src="program1.jpg" alt="Program 1">
+          <h3>Information Technology</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque volutpat finibus lorem vel
+            ultrices.</p>
+        </div>
+        <div class="program">
+          <img src="program2.jpg" alt="Program 2">
+          <h3>Computer Engineering</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque volutpat finibus lorem vel
+            ultrices.</p>
+        </div>
+        <div class="program">
+          <img src="program3.jpg" alt="Program 3">
+          <h3>Electrical Engineering</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque volutpat finibus lorem vel
+            ultrices.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="events">
+      <div class="container">
+        <h2>Upcoming Events</h2>
+        <div class="event">
+          <img src="event1.jpg" alt="Event 1">
+          <h3>Victory Day</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque volutpat finibus lorem vel
+            ultrices.</p>
+        </div>
+        <div class="event">
+          <img src="event2.jpg" alt="Event 2">
+          <h3>Teacher's Day</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque volutpat finibus lorem vel
+            ultrices.</p>
+        </div>
+        <div class="event">
+          <img src="event3.jpg" alt="Event 3">
+          <h3>Annual Function</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque volutpat finibus lorem vel
+            ultrices.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="campus-facilities">
+      <div class="container">
+        <h2>Campus Facilities</h2>
+        <div class="facility">
+          <img src="facility1.jpg" alt="Facility 1">
+          <h3>Library</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque volutpat finibus lorem vel
+            ultrices.</p>
+        </div>
+        <div class="facility">
+          <img src="facility2.jpg" alt="Facility 2">
+          <h3>Laboratories</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque volutpat finibus lorem vel
+            ultrices.</p>
+        </div>
+        <div class="facility">
+          <img src="facility3.jpg" alt="Facility 3">
+          <h3>Sports Complex</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque volutpat finibus lorem vel
+            ultrices.</p>
+        </div>
+      </div>
+
+    </section>
+  </div>
+  <div class="main3 card2">
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Our college is located at new vidhyanagar. Our phone number is 123-456-7890. Our email address is
+        mbit@edu.in</p>
+
+      <form id="contact-form">
+
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+    <footer class="bg-dark text-center text-white">
+      <div class="container p-4 pb-0">
+        <section class="mb-4">
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fa fa-facebook-f"></i></a>
+
+          <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/krishpa63691126" role="button"><i
+              class="fa fa-twitter"></i></a>
+
+          <a class="btn btn-outline-light btn-floating m-1" href="" role="button"><i class="fa fa-google"></i></a>
+
+          <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/krishpatel029/"
+            role="button"><i class="fa fa-instagram"></i></a>
+
+          <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/krish-patel-a2a81b247"
+            role="button"><i class="fa fa-linkedin"></i></a>
+
+          <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/krishpatel29" role="button"><i
+              class="fa fa-github"></i></a>
+        </section>
+      </div>
+
+    </footer>
+
+  </div>
+
+</body>
+
+</html>
